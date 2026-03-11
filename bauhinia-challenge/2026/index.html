@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en, zh-HK">
+<head>
+	<meta charset="UTF-8">
+	<title>Bauhinia Challenge (2026) 洋紫荊挑戰賽（二零二六）</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/bc.css">
+</head>
+<body>
+<!-- Postponement Modal 
+<div id="postpone-modal" class="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+  <div class="modal-box">
+    <header class="modal-header">
+      <p><h3 id="modal-title">賽程更新</h3></p>
+      <p><h3 id="modal-title-en">Tournament Update</h3></p>
+      <button class="modal-close" aria-label="Close notice">&times;</button>
+    </header>
+
+    <div class="modal-body">
+      <p>
+        香港魁地奇盃現將定於<span class="alnum">2026</span>年<span class="alnum">4</span>月<span class="alnum">25</span>日（星期六）舉行。<br>
+        感謝支持！
+      </p>
+      <p>
+        The Hong Kong Quadball Cup will now take place on 25 April (Sat).<br>
+		Thank you for your support!
+      </p>
+    </div>
+
+    <footer class="modal-footer">
+		<a	href="https://link.hkquidditch.org/playhkqc" 
+			class="btn btn-secondary modal-action" 
+			target="_blank" rel="noopener" style="display: none">
+			<span>填寫賽程規劃表格</span><br>
+			<span>Submit Availability</span>
+		</a>
+		<button class="btn btn-primary modal-dismiss">
+        <span>收到，繼續瀏覽網頁</span><br>
+        <span>Got it, continue to site</span>
+      </button>
+    </footer>
+  </div>
+</div>
+-->
+<!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+		<a href="#hero" class="navbar-logo" aria-label="Bauhinia Challenge 洋紫荊挑戰賽">
+			<img src="assets/img/Player-Keeper.png" alt="Bauhinia Challenge 洋紫荊挑戰賽" class="navbar-logo-img">
+		</a>
+		<a href="#hero" class="navbar-title" aria-label="Bauhinia Challenge 洋紫荊挑戰賽">
+			<span class="en">Bauhinia Challenge</span><span class="zh">洋紫荊挑戰賽</span>
+		</a>
+	</div>
+
+    <ul class="navbar-menu">
+      <li><a href="#hero" class="nav-link zh">首頁</a></li>
+		<li><a href="#hero" class="nav-link en">Home</a></li>
+      <li><a href="#about-event" class="nav-link zh">關於</a></li>
+		<li><a href="#about-event" class="nav-link en">About</a></li>
+      <li><a href="#details" class="nav-link zh">賽事資料</a></li>
+		<li><a href="#details" class="nav-link en">Details</a></li>
+      <li style="display: none"><a href="#teams" class="nav-link zh">隊伍</a></li>
+		<li style="display: none"><a href="#teams" class="nav-link en">Teams</a></li>
+	  <li><a href="#format" class="nav-link zh">賽制</a></li>
+		<li><a href="#format" class="nav-link en">Format</a></li>
+	  <li><a href="#quadball-intro" class="nav-link zh">運動簡介</a></li>
+		<li><a href="#quadball-intro" class="nav-link en">About Quadball</a></li>
+      <li class="lang-switcher">
+        <span class="lang-separator">│</span>
+        <a href="#" class="lang-toggle active" data-lang="zh">中文</a>
+        <span class="lang-separator">│</span>
+        <a href="#" class="lang-toggle" data-lang="en">EN</a>
+      </li>
+    </ul>
+  </nav>
+
+<!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-tagline zh"><strong>香港魁地奇總會</strong> 呈獻</p>
+
+      <!-- hero title image -->
+      <div class="hero-title">
+        <h1>
+          Bauhinia Challenge<br>洋紫荊挑戰賽
+        </h1>
+	  <p class="hero-tagline en">Presented by <strong>Hong Kong Quadball Association</strong></p>
+    </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="label"><span class="zh">日期</span><span class="en">Date</span></span>
+          <span class="value date">
+			  <span class="zh"><span class="alnum">2026</span>年<span class="alnum">7</span>月<span class="alnum">18</span>日（六）</span>
+			  <span class="en">18 Jul 2026 (Sat)</span>
+		  </span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="label"><span class="zh">地點</span><span class="en">Venue</span></span>
+          <span class="value"><span class="zh">待定</span><span class="en">To Be Announced</span></span>
+        </div>
+      </div>
+
+      <p class="hero-subtitle zh">
+        一場面向全球球隊嘅魁地奇邀請賽。
+      </p>
+      <p class="hero-subtitle en">
+        An international quadball invitation tournament open to teams worldwide.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#registration" class="btn btn-primary"><span class="zh">查看報名詳情</span><span class="en">Registration Info</span></a>
+		<a href="https://link.hkquidditch.org/playhkqc/" class="btn btn-primary" style="display: none"><span class="zh">立即報名</span><span class="en">Register Now</span></a>
+		<a href="https://www.youtube.com/@hkquadball/live/" class="btn btn-primary" style="display: none"><span class="zh">收睇現場直播</span><span class="en">Watch Live</span></a>
+        <a href="mailto:tournament@hkquadball.org" class="btn btn-secondary"><span class="zh">贊助查詢</span><span class="en">Sponsor Enquiry</span></a>
+		<a href="#quadball-intro" class="btn btn-secondary"><span class="zh">認識魁地奇運動</span><span class="en">More About Quadball</span></a>
+      </div>
+<!--
+      <p class="hero-note zh">
+        《二零二六年香港魁地奇盃》將延至<span class="alnum">2026</span>年<span class="alnum">4</span>月<span class="alnum">25</span>日（星期六）舉行。
+      </p>
+      <p class="hero-note en">
+        The Hong Kong Quadball Cup 2026 will now take place on 25 April (Sat).
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="assets/img/2026KV.png"
+        alt="Four quadball players in game action"
+        class="hero-kv"
+      >
+    </div>
+-->
+  </section>
+<!--
+	<section id="notice" class="section notice-banner">
+		<div class="container">
+			<div class="notice-box">
+				<p class="zh">
+					<strong>賽程更新：</strong>
+					香港魁地奇盃現將定於<span class="alnum">2026</span>年<span class="alnum">4</span>月<span class="alnum">25</span>日（星期六）舉行。
+				</p>
+				<p class="en">
+					<strong>Tournament update:</strong>
+					The Hong Kong Quadball Cup will now take place on 25 April 2026 (Sat).
+				</p>
+			</div>
+		</div>
+	</section>
+-->
+<!-- About Event -->
+	<section id="about-event" class="section">
+		<div class="container">
+			<h2 class="section-title zh">關於賽事</h2>
+			<h2 class="section-title en">About the Event</h2>
+
+			<div class="bilingual-text">
+				<div class="zh">
+					<p>
+						洋紫荊挑戰賽為香港魁地奇總會主辦之國際魁地奇邀請賽，集合本地球隊，並歡迎世界各地球隊來港切磋交流。
+					</p>
+					<p>
+						今年賽事將由兩支香港球隊確認參賽，其餘名額會按海外球隊報名情況分配。
+					</p>
+				</div>
+				<div class="en">
+					<p>
+						The Bauhinia Challenge is an international quadball tournament hosted by the Hong Kong Quadball Association (HKQA), 
+						featuring local Hong Kong teams and inviting clubs from around the world to challenge in the heart of Hong Kong.
+					</p>
+					<p>
+						This year’s edition will include two confirmed Hong Kong teams, 
+						with additional spots filled based on international registrations.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="history" class="section">
+		<div class="container">
+			<h3 class="section-title zh">賽事背景</h2>
+			<h3 class="section-title en">Tournament History</h2>
+
+			<div class="bilingual-text">
+				<div class="zh">
+					<p>
+						首屆洋紫荊挑戰賽於<span class="alnum">2023</span>年<span class="alnum">4</span>月舉行，
+						<strong>「<span class="alnum">Katayaburi</span>東京魁地奇會」</strong>遠道來港，
+						對戰香港球隊<strong>「<span class="alnum">Hongkong Hydras</span>」</strong>及<strong>「<span class="alnum">Victorian Dragons</span>」</strong>，
+						並於三場比賽中全部勝出，順利捧盃。
+					</p>
+					<p>
+						<strong>「<span class="alnum">Katayaburi</span>」</strong>曾於<strong>《<span class="alnum">2022</span>年魁地奇亞太球會冠軍盃》</strong>取得季軍，
+						是日本球隊首次訪港參與魁地奇賽事。
+					</p>
+				</div>
+				<div class="en">
+					<p>
+						The inaugural Bauhinia Challenge took place in April 2023. 
+						<strong>Katayaburi Quidditch Tokyo</strong> travelled to Hong Kong and won the tournament against local teams 
+						<strong>Hongkong Hydras Quidditch Club</strong> and <strong>Victorian Dragons</strong>, winning all three matches.
+					</p>
+					<p>
+						As the first Japanese quadball team to visit to Hong Kong, 
+						<strong>Katayaburi</strong> had previously finished third at the <strong>2022 Asian-Pacific Quadball Cup</strong>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- BC2 Details -->
+	<section id="details" class="section">
+		<div class="container">
+			<h2 class="section-title zh">賽事資料</h2>
+			<h2 class="section-title en">Tournament Details</h2>
+			<div class="details-grid">
+				<div class="detail-item">
+					<h3><span class="zh">日期</span><span class="en">Date</span></h3>
+					<p><span class="en">18 July 2026 (Saturday)</span><span class="zh"><span class="alnum">2026</span>年<span class="alnum">7</span>月<span class="alnum">18</span>日（星期六）</span></p>
+				</div>
+				<div class="detail-item">
+					<h3><span class="zh">地點</span><span class="en">Venue</span></h3>
+					<p><span class="en">To be announced.</span><span class="zh">比賽場地有待確認，稍後公佈。</span></p>
+				</div>
+				<div class="detail-item">
+					<h3><span class="zh">主辦機構</span><span class="en">Organiser</span></h3>
+					<p><span class="en">Hong Kong Quadball Association</span><span class="zh">香港魁地奇總會</span></p>
+				</div>
+				<div class="detail-item">
+					<h3><span class="zh">報名截止日期</span><span class="en">Registration Deadline</span></h3>
+					<p>
+						<span class="en">19 June 2026 (Friday)</span>
+						<span class="zh"><span class="alnum">2026</span>年<span class="alnum">6</span>月<span class="alnum">19</span>日<br>（星期五／端午節）</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Registration -->
+	  <section id="registration" class="section">
+		<div class="container">
+			<h2 class="section-title zh">報名</h2>
+			<h2 class="section-title en">Registration</h2>
+			<p class="coming-soon">
+				<span class="zh">請大家預留<span class="alnum">7</span>月<span class="alnum">18</span>日，場地一獲確認，本會將隨即開放報名，敬請期待！</span>
+				<span class="en">Please mark your calendar for 18 Jul - We will open for registration once the venue is confirmed. Please stay tuned!</span>
+			</p>
+			<p><br></p>
+			<div class="bilingual-text" style="display: none">
+
+				<p class="zh">
+					雖然比賽已延期，但我們仍希望了解你的參賽意願。
+					請花<span class="alnum">2</span>分鐘填寫此表，幫助我們規劃新賽程。
+				</p>
+				<p class="en">
+					Even though the Cup is postponed, we still want to gauge your availability.
+					Please spend 2 minutes on this form to help us plan the new schedule.
+				</p>
+			</div>
+			<div class="section-actions" style="display: none">
+				<a	href="https://link.hkquidditch.org/playhkqc" 
+					class="btn btn-secondary" 
+					target="_blank" rel="noopener">
+					<span class="zh">填寫賽程規劃表格</span>
+					<span class="en">Submit Availability</span>
+				</a>
+			</div>
+			<div class="bilingual-text"  style="display: none">
+
+				<p class="zh">
+					報名費用：港幣<span class="alnum"><strong>350</strong></span>元正<strong>（名額有限，正價為港幣400元）</strong><br>
+					<i>首次參賽或轉隊球員須另付球衣費用</i><br>
+					<!--<span class="alnum">2026</span>年<span class="alnum">2</span>月<span class="alnum">21</span>日（六）截止報名。-->
+				</p>
+				<p class="en">
+					HK$<span class="alnum"><strong>350</strong></span> <strong>(Limited quota, $400 thereafter)</strong><br>
+					<i>First time and transfer players are required to pay additional costs for jersey kit</i><br>
+					<!--Registration closes 21 Feb 2026 (Sat).-->
+				</p>
+				
+			</div>
+			<a href="https://link.hkquidditch.org/playhkqc" class="btn btn-primary" style="display: none"><span class="zh">立即報名</span><span class="en">Register Now</span></a>
+		</div>
+	  </section>
+
+<!-- Schedule -->
+	  <section id="schedule" class="section" style="display: none">
+		<div class="container">
+		  <h2 class="section-title zh">賽程表</h2>
+		  <h2 class="section-title en">Schedule</h2>
+		  <p class="coming-soon">
+			<span class="zh">賽程表容後公佈。</span>
+			<span class="en">The schedule will be announced in due course.</span>
+		  </p>
+		  <div class="bilingual-text">
+			<p class="zh" style="text-align: center; display: none">
+			  時間：<span class="alnum">2026</span>年<span class="alnum">4</span>月<span class="alnum">25</span>日（星期六）下午
+			</p>
+			<p class="en" style="text-align: center; display: none">
+			  Time: Afternoon of 25 April 2026 (Sat)
+			</p>
+
+		  </div>
+		</div>
+	  </section>
+
+<!-- BC1 Highlights -->
+		<section id="highlights" class="section" style="display: none">
+		  <div class="container">
+			<h2 class="section-title zh">上屆精彩重溫</h2>
+			<h2 class="section-title en">Highlights from 2023</h2>
+
+			<div class="bilingual-text">
+			  <p class="zh">
+				重溫<span class="alnum">2025</span>年香港魁地奇盃精彩時刻，感受比賽氣氛，為今年賽事熱身。
+			  </p>
+			  <p class="en">
+				Relive the best moments from the 2025 Hong Kong Quadball Cup
+				to get a taste of the atmosphere for this year’s edition.
+			  </p>
+			</div>
+
+			<div class="highlights-layout">
+			  <!-- Carousel -->
+			  <div class="highlights-media">
+				<div class="carousel" aria-label="HKQC 2025 photo highlights">
+				  <button class="carousel-arrow prev" type="button" aria-label="Previous photo">&#10094;</button>
+
+				  <div class="carousel-track">
+					<!-- Slide 1 -->
+					<div class="carousel-slide is-active">
+					  <img src="assets/img/2025HKQC-01-H-Law.JPG"
+						   alt="HKQC 2025 highlight 1">
+					</div>
+					<!-- Slide 2 -->
+					<div class="carousel-slide">
+					  <img src="assets/img/2025HKQC-02-C-Lam.JPG"
+						   alt="HKQC 2025 highlight 2">
+					</div>
+					<!-- Slide 3 -->
+					<div class="carousel-slide">
+					  <img src="assets/img/2025HKQC-03-JC-Cheung.JPG"
+						   alt="HKQC 2025 highlight 3">
+					</div>
+					<!-- Slide 4 -->
+					<div class="carousel-slide">
+					  <img src="assets/img/2025HKQC-04-C-Lam.JPG"
+						   alt="HKQC 2025 highlight 4">
+					</div>
+					<!-- Slide 5 -->
+					<div class="carousel-slide">
+					  <img src="assets/img/2025HKQC-05-H-Law.JPG"
+						   alt="HKQC 2025 highlight 5">
+					</div>
+					<!-- Slide 6 -->
+					<div class="carousel-slide">
+					  <img src="assets/img/2025HKQC-06-JC-Cheung.JPG"
+						   alt="HKQC 2025 highlight 6">
+					</div>
+					<!-- Add up to ~10 slides -->
+					<!--
+					<div class="carousel-slide">
+					  <img src="assets/img/highlights-2025-03.jpg"
+						   alt="HKQC 2025 highlight 3">
+					</div>
+					-->
+				  </div>
+
+				  <button class="carousel-arrow next" type="button" aria-label="Next photo">&#10095;</button>
+
+				  <div class="carousel-dots">
+					<button class="dot is-active" type="button" aria-label="Go to slide 1"></button>
+					<button class="dot" type="button" aria-label="Go to slide 2"></button>
+					<button class="dot" type="button" aria-label="Go to slide 3"></button>
+					<button class="dot" type="button" aria-label="Go to slide 4"></button>
+					<button class="dot" type="button" aria-label="Go to slide 5"></button>
+					<button class="dot" type="button" aria-label="Go to slide 6"></button>
+					<!-- Add one dot per slide -->
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Live stream replay -->
+			  <div class="highlights-actions">
+				<a
+				  href="https://www.youtube.com/watch?v=ID8aLzyCmgk"
+				  class="btn btn-primary"
+				  target="_blank"
+				  rel="noopener"
+				>
+				  <span class="zh"><span class="alnum">2025</span>年直播重溫</span>
+				  <span class="en">Watch 2025 Live Stream Replay</span>
+				</a>
+			  </div>
+			</div>
+			
+		  </div>
+		</section>
+<!-- Teams -->
+	  <section id="teams" class="section" style="display: none">
+		<div class="container">
+		  <h2 class="section-title zh">參賽隊伍</h2>
+		  <h2 class="section-title en">Teams</h2>
+		  <p class="coming-soon">
+			<span class="zh">隊伍及球員名單容後公佈。</span>
+			<span class="en">Team and player rosters will be announced later.</span>
+		  </p>
+		</div>
+	  </section>
+
+<!-- HKQC Rules -->
+	<section id="format" class="section" style="display: ">
+		<div class="container">
+			<h2 class="section-title zh">賽制與規則</h2>
+			<h2 class="section-title en">Format and Rules</h2>
+			<p class="coming-soon" style="display: ">
+				<span class="zh">
+					最終賽制（例如單循環聯賽、三角賽或淘汰賽）將視實際參賽隊數而定，
+					並會於<span class="alnum">2026</span>年<span class="alnum">6</span>月<span class="alnum">19</span>日後公佈。
+				</span>
+				<span class="en">
+					The final format (e.g. round-robin, triangular or knockout) will be determined 
+					based on the number of participating teams and will be announced after 19 June 2026.
+				</span>
+			</p>
+			<div class="bilingual-text" style="display: none">
+
+				<p class="zh">
+					參賽隊伍<span class="alnum"><strong>Hongkong Hydras Quidditch Club</strong></span>及<span class="alnum"><strong>Victorian Dragons</strong></span>將對賽兩輪決出冠軍，勝出條件依序為：
+				</p>
+				<p class="en">
+					The teams – <strong>Hongkong Hydras Quidditch Club</strong> and <strong>Victorian Dragons</strong> – will play a
+					two-legged tie. The champion is awarded to the team that has:
+				</p>
+				<ol type="1">
+					<li><span class="zh">最多勝出場數</span><span class="en">A greater number of games won, otherwise;</span>
+					<li><span class="zh">最高累計得分</span><span class="en">A higher cumulative score, otherwise;</span>
+					<li><span class="zh">奪得最多金探子</span><span class="en">A greater number of snitch (flag) catches, otherwise;</span>
+					<li><span class="zh">最快奪得金探子</span><span class="en">Fastest snitch (flag) capture</span>
+				</ol>
+				<a href="https://drive.google.com/file/d/1QKUDcs4zGoivMqrS-YDl_Su-yYP_knRl/view?usp=sharing" class="btn btn-secondary"><span class="zh">《賽事章則》（只提供英文版）</span><span class="en">Tournament Regulations (External Link)</span></a>
+			</div>
+		</div>
+	</section>
+
+<!-- Sponsorship -->
+	<section id="sponsor" class="section" style="display: ">
+		<div class="container">
+			<h2 class="section-title zh">贊助機會</h2>
+			<h2 class="section-title en">Sponsorship Opportunities</h2>
+			<div class="bilingual-text">
+				<div class="zh">
+					<p>
+						歡迎與香港魁地奇總會及洋紫荊挑戰賽合作，接觸本地及海外關注這項混性別全接觸新興運動的觀眾群。
+					</p>
+					<p>
+						如欲查詢品牌曝光、展位、冠名贊助等合作方案，請聯絡：
+					</p>
+				</div>
+				<div class="en">
+					<p>
+						Partner with the Hong Kong Quadball Association and the Bauhinia Challenge 
+						to reach local and international audiences of a growing, mixed-gender, full-contact sport.
+					</p>
+					<p>
+						For sponsorship packages (branding, booths, title sponsor and more), please contact:
+					</p>
+				</div>
+				<a 
+				  href="mailto:tournament@hkquadball.org"
+				  class="btn btn-secondary">
+					<span class="zh">電郵賽事籌委會</span>
+					<span class="en">Email the Tournament Organising Committee</span>
+				</a>
+			</div>
+		</div>
+	</section>
+	
+<!-- Quadball Info -->
+	<section id="quadball-intro" class="section">
+		<div class="container">
+			<h2 class="section-title zh">魁地奇運動簡介</h2>
+			<h2 class="section-title en">Introduction to Quadball</h2>
+
+			<div class="bilingual-text">
+				<div class="zh">
+					<p>
+					  魁地奇運動受名著《哈利波特》啟發，將欖球及閃避球兩項緊張刺激的運動融為一體。
+					  比賽時，各隊將派出六至七名球員作賽。球員分成四個崗位，球隊成功把排球（即《哈利波特》中的快浮）
+					  投過球圈即得<span class="alnum">10</span>分，並可利用閃避球（即《哈利波特》中的搏格）截擊對手。
+					  開賽<span class="alnum">20</span>分鐘後每隊各派一隊員搶奪金探子（實為置於特定裁判後方腰間的長襪，內裏裝有網球為負重），成功搶得金探子一隊得<span class="alnum">30</span>分。
+					</p>
+					<p>
+					  魁地奇運動以推廣性別共融平等為宗旨，球員按其性別認同參與，同場較量，每隊場內男、女、非二元或其他性別球員大部份時間不可佔多於三人。
+					</p>
+					<p>
+					  國際魁地奇協會<span class="alnum">2022</span>年將運動更名為「<span class="alnum">Quadball</span>」，希望推動魁地奇運動跳出小說幻想世界，邁向專業發展，同時反映場內球員分成四種崗位，以四個皮球對賽。
+					</p>
+				</div>
+
+				<div class="en">
+					<p>
+					  Inspired by the <i>Harry Potter</i> series, quadball is a sport that combines rugby and dodgeball elements.
+					  Each team fields six to seven players across four positions. Teams score 10 points by throwing a volleyball (the "quaffle")
+					  through the hoops, and defend or disable opponents using dodgeballs.
+					  After the first 20 minutes, one player from each team attempts to catch the snitch
+					  (a weighted flag, which has a tennis ball placed inside a sock attached to an official's waist), scoring 30 points if successful.
+					</p>
+					<p>
+					  Gender inclusivity and equality are fundamental to quadball. Players participate according to their gender identity, competing together on the same field.
+					  No more than three players identifying as the same gender (including male, female, non-binary, or other identities) may be on the field for most of the time.
+					</p>
+					<p>
+					  In 2022, the International Quadball Association officially renamed the sport "Quadball" to promote its professional development beyond fictional origins,
+					  reflecting the four positions and four balls in play.
+					</p>
+				</div>
+			</div>
+			
+			<div class="quadball-cards">
+			<!-- 左：球員位置 -->
+				<div class="positions-group">
+					<h3 class="group-title zh">球員崗位</h3>
+					<h3 class="group-title en">Player Positions</h3>
+					
+					<div class="position-grid">
+					  
+						<!-- 1-追蹤手 Chaser -->
+						<div class="position-card chaser">
+							<div class="position-info">
+								<img src="assets/img/Player-Chaser.png" alt="追蹤手 Chaser" class="player-icon">
+								<span class="position-name zh">追蹤手</span>
+								<span class="position-name en">Chaser</span>
+								<span class="headband-box zh white">佩戴白色頭巾</span>
+								<span class="headband-box en white">White Headband</span>
+								<span class="count">3×</span>
+							</div>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">使用排球（「快浮」）進攻球圈得分</span>
+								<span class="en">Score points with Volleyball (<i>Quaffle</i>)</span>
+							</div>
+						</div>
+						
+						<!-- 2-看守手 Keeper -->
+						<div class="position-card keeper">
+							<div class="position-info">
+								<img src="assets/img/Player-Keeper.png" alt="看守手 Keeper" class="player-icon">
+								<span class="position-name zh">看守手</span>
+								<span class="position-name en">Keeper</span>
+								<span class="headband-box zh green">佩戴綠色頭巾</span>
+								<span class="headband-box en green">Green Headband</span>
+								<span class="count">1×</span>
+							</div>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">與追蹤手相同，另於禁區內享防守特權</span>
+								<span class="en">Same as Chaser; Enjoys privilege in Keeper Zone</span>
+							</div>
+						</div>
+						
+						<!-- 3-打擊手 Beater -->
+						<div class="position-card beater">
+							<div class="position-info">
+								<img src="assets/img/Player-Beater.png" alt="打擊手 Beater" class="player-icon">
+								<span class="position-name zh">打擊手</span>
+								<span class="position-name en">Beater</span>
+								<span class="headband-box zh black">佩戴黑色頭巾</span>
+								<span class="headband-box en black">Black Headband</span>
+								<span class="count">2×</span>
+							</div>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">利用閃避球（「搏格」）截擊對手，阻礙對方攻勢</span>
+								<span class="en">Stop opponents from advancing using Dodgeball (<i>bludger</i>)</span>
+							</div>
+						</div>
+						
+						<!-- 4-搜捕手 Seeker -->
+						<div class="position-card seeker">
+							<div class="position-info">
+								<img src="assets/img/Player-Seeker.png" alt="搜捕手 Seeker" class="player-icon">
+								<span class="position-name zh">搜捕手</span>
+								<span class="position-name en">Seeker</span>
+								<span class="headband-box zh yellow">佩戴黃色頭巾</span>
+								<span class="headband-box en yellow">Yellow Headband</span>
+								<span class="count">1×</span>
+							</div>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">開賽後第<span class="alnum">20</span>分鐘上場，目標是奪得垂於裁判腰後的金探子</span>
+								<span class="en">Playing from the 20th minute, aims at catching the Flag (<i>Snitch</i>)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 右：皮球 -->
+				<div class="balls-group">
+					<h3 class="group-title zh">比賽用球</h3>
+					<h3 class="group-title en">Game Balls</h3>	
+					<div class="ball-grid">
+						<!-- Volleyball -->
+						<div class="ball-card volleyball">
+							<img src="assets/img/Balls-Volleyball.png" alt="排球 Volleyball" class="ball-icon">
+							<h4 class="position-name zh">排球（「快浮」）</h4>
+							<h4 class="position-name en">Volleyball</h4>
+							<span class="count">1×</span>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">限追蹤手、看守手使用</span>
+								<span class="en"><i>Quaffle in Harry Potter.</i><br>Played by Chasers and Keepers only</span>
+							</div>
+						</div>
+						  
+						<!-- Dodgeball -->
+						<div class="ball-card dodgeball">
+							<img src="assets/img/Balls-Dodgeball.png" alt="閃避球 Dodgeball" class="ball-icon">
+							<h4 class="position-name zh">閃避球（「搏格」）</h4>
+							<h4 class="position-name en">Dodgeball</h4>
+							<span class="count">3×</span>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">限打擊手使用，擊中對手即時淘汰，須 <strong>觸碰己方球圈</strong> 復活</span>
+								<span class="en">Played by Beaters only. Players are eliminated when being hit, and must <strong>touch their own hoop</strong> to resume play.</span>
+							</div>
+						</div>
+						  
+						<!-- Snitch -->
+						<div class="ball-card snitch">
+							<img src="assets/img/Balls-Flag.png" alt="金探子 Flag / Snitch" class="ball-icon">
+							<h4 class="position-name zh">金探子</h4>
+							<h4 class="position-name en">Flag / Snitch</h4>
+							<span class="count">1×</span>
+							<!-- 備註 -->
+							<div class="position-note">
+								<span class="zh">置於裁判後方，搜捕手成功搶奪即得<span class="alnum">30</span>分並完成賽事。</span>
+								<span class="en">Attach to the back of an official runner. Seekers to catch and end the game with a 30-point reward.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="site-footer">
+		<div class="footer-inner">
+			<div class="footer-credits" style="display: none">
+				<p>
+					<span class="zh">封面圖片：<span class="alnum">2025</span>年香港魁地奇盃義工</span><span class="alnum"><span class="en">Cover photo: </span>JC Cheung, Christy Lam<span class="en">, volunteers of Hong Kong Quadball Cup 2025</span></span>
+					<br>
+					<span class="zh">往年活動圖片：<span class="alnum">2025</span>年香港魁地奇盃義工</span><span class="alnum"><span class="en">2025 activity highlights photo: </span>JC Cheung, Christy Lam, Henry Law<span class="en">, volunteers of Hong Kong Quadball Cup 2025</span></span>
+					<br>
+					<span class="zh">插圖：</span><span class="alnum"><span class="en">Illustration: </span>Gordon Choi/HKQA</span>
+				</p>
+			</div>
+
+			<div class="footer-social">
+			    <img
+				  src="assets/img/HKQA-Logo-w-text-WHITE.png"
+				  alt="Logo of Hong Kong Quadball Association 香港魁地奇總會標誌"
+				  class="footer-logo"
+				>	
+			</div>
+			<div class="footer-social">
+				<div class="social-pill" aria-label="HKQA social links">
+					<a class="social-icon facebook" href="https://www.facebook.com/hkquadball" target="_blank" rel="noopener"
+					   aria-label="HKQA Facebook">
+					  <svg viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4v1.7H16.9L16.5 15h-2v7A10 10 0 0 0 22 12z"/>
+					  </svg>
+					</a>
+
+					<a class="social-icon instagram" href="https://www.instagram.com/hkquadball/" target="_blank" rel="noopener"
+					   aria-label="HKQA Instagram">
+					  <svg viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.7a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+					  </svg>
+					</a>
+
+					<a class="social-icon youtube" href="https://www.youtube.com/@hkquadball" target="_blank" rel="noopener"
+					   aria-label="HKQA YouTube">
+					  <svg viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.5.4A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.4 7.5.4 7.5.4s5.8 0 7.5-.4a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+					  </svg>
+					</a>
+
+					<span class="social-handle">@hkquadball</span>
+				</div>	
+			</div>				
+			<div class="footer-social">
+				<a href="https://www.hkquadball.org" target="_blank" rel="noopener" aria-label="HKQA Website" style="color: white">hkquadball.org</a>
+			</div>
+
+		</div>
+	</footer>
+
+  <!-- Scripts -->
+  <script>
+    // 語言自動偵測
+    function detectLanguage() {
+      const lang = (navigator.language || navigator.userLanguage || 'zh').substr(0, 2);
+      return lang === 'zh' ? 'zh' : 'en';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const defaultLang = detectLanguage();
+      document.documentElement.className = 'lang-' + defaultLang;
+
+      const toggles = document.querySelectorAll('.lang-toggle');
+      toggles.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === defaultLang);
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          const lang = btn.dataset.lang;
+          document.documentElement.className = 'lang-' + lang;
+          toggles.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      // 中英混排：包 alnum
+      function wrapAlphanumeric(text) {
+        return text.replace(/(\d+(\.\d+)?%?|\b[a-zA-Z]+\b)/g, '<span class="alnum">$1</span>');
+      }
+
+      document.querySelectorAll('.alnum-target').forEach(el => {
+        el.innerHTML = wrapAlphanumeric(el.textContent);
+      });
+    });
+
+	  // Simple carousel for highlights
+	  document.addEventListener('DOMContentLoaded', function () {
+		const carousel = document.querySelector('.carousel');
+		if (!carousel) return;
+
+		const track = carousel.querySelector('.carousel-track');
+		const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+		const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+		const nextBtn = carousel.querySelector('.carousel-arrow.next');
+		const dots = Array.from(carousel.querySelectorAll('.dot'));
+		let index = 0;
+
+		function updateCarousel(newIndex) {
+		  index = (newIndex + slides.length) % slides.length;
+
+		  slides.forEach((slide, i) => {
+			slide.classList.toggle('is-active', i === index);
+		  });
+		  dots.forEach((dot, i) => {
+			dot.classList.toggle('is-active', i === index);
+		  });
+		  track.style.transform = `translateX(-${index * 100}%)`;
+		}
+
+		prevBtn.addEventListener('click', () => updateCarousel(index - 1));
+		nextBtn.addEventListener('click', () => updateCarousel(index + 1));
+		dots.forEach((dot, i) =>
+		  dot.addEventListener('click', () => updateCarousel(i))
+		);
+	  });
+	
+	// Postponement modal
+	document.addEventListener('DOMContentLoaded', function() {
+	  const modal = document.getElementById('postpone-modal');
+	  const dismissTriggers = modal.querySelectorAll('.modal-dismiss, .modal-close');
+	  const overlay = document.querySelector('.modal-overlay');
+
+	  dismissTriggers.forEach(btn => {
+		btn.addEventListener('click', () => {
+		  modal.classList.add('dismissed');
+		  // No localStorage = shows every reload
+		});
+	  });
+
+	  // No persistence check = always shows
+	});
+
+	</script>
+</body>
+</html>
