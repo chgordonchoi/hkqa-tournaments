@@ -709,7 +709,7 @@ html.lang-en .group-title.en, html.lang-en .position-name.en, html.lang-en .posi
 
 .position-card:hover, .ball-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(255,105,180,0.3);
 }
 
 /* 圖片 */
