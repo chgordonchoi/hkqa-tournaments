@@ -1456,3 +1456,38 @@ a {
 .xref:hover {
   color: #fff;
 }
+
+.toc-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 950;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 0.78rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bc-primary), var(--bc-primary-hover));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(146, 1, 66, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.toc-fab.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 920px) {
+  .toc-fab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
