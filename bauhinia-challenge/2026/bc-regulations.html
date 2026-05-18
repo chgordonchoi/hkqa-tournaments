@@ -387,27 +387,28 @@
     const toggles = document.querySelectorAll('.lang-toggle');
     toggles.forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); const lang = btn.dataset.lang; document.documentElement.className = 'lang-' + lang; toggles.forEach(b => b.classList.remove('active')); btn.classList.add('active'); }));
   </script>
-  <script>
-	const toggles = document.querySelectorAll('.lang-toggle');
-	toggles.forEach(btn => btn.addEventListener('click', e => {
-	  e.preventDefault();
-	  const lang = btn.dataset.lang;
-	  document.documentElement.className = 'lang-' + lang;
-	  toggles.forEach(b => b.classList.remove('active'));
-	  btn.classList.add('active');
-	}));
+	<script>
+		const toggles = document.querySelectorAll('.lang-toggle');
+		toggles.forEach(btn => btn.addEventListener('click', e => {
+		  e.preventDefault();
+		  const lang = btn.dataset.lang;
+		  document.documentElement.className = 'lang-' + lang;
+		  toggles.forEach(b => b.classList.remove('active'));
+		  btn.classList.add('active');
+		}));
 
-	const tocFab = document.getElementById('tocFab');
-	const contents = document.getElementById('contents');
+		const tocFab = document.getElementById('tocFab');
+		const contents = document.getElementById('contents');
 
-	function updateTocFab() {
-	  if (!tocFab || !contents) return;
-	  const rect = contents.getBoundingClientRect();
-	  tocFab.classList.toggle('is-visible', rect.bottom < 80);
-	}
+		function updateTocFab() {
+		  if (!tocFab || !contents || window.innerWidth > 920) return;
+		  const rect = contents.getBoundingClientRect();
+		  tocFab.classList.toggle('is-visible', rect.bottom < 80);
+		}
 
-	window.addEventListener('scroll', updateTocFab, { passive: true });
-	window.addEventListener('load', updateTocFab);
-  </script>
+		window.addEventListener('scroll', updateTocFab, { passive: true });
+		window.addEventListener('resize', updateTocFab);
+		window.addEventListener('load', updateTocFab);
+	</script>
 </body>
 </html>

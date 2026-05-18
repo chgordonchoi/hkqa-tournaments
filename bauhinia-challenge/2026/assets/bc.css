@@ -1463,10 +1463,6 @@ a {
   bottom: 1rem;
   z-index: 950;
   display: none;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
   padding: 0.78rem 1rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--bc-primary), var(--bc-primary-hover));
@@ -1478,10 +1474,17 @@ a {
   backdrop-filter: blur(12px);
 }
 
-.toc-fab.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+.toc-fab:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.toc-return {
+  display: none;
+  margin: 0 0 0.85rem;
+  color: var(--bc-headings);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 @media (max-width: 920px) {
@@ -1489,5 +1492,9 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .toc-return {
+    display: inline-block;
   }
 }
