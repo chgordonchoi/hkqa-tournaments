@@ -384,8 +384,26 @@
   
 <a href="#contents" class="toc-fab" id="tocFab" aria-label="Jump to contents"><span class="en">Contents</span><span class="zh">目錄</span></a>
   <script>
-    const toggles = document.querySelectorAll('.lang-toggle');
-    toggles.forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); const lang = btn.dataset.lang; document.documentElement.className = 'lang-' + lang; toggles.forEach(b => b.classList.remove('active')); btn.classList.add('active'); }));
+    function detectLanguage() {
+      const lang = (navigator.language || navigator.userLanguage || 'zh').substr(0, 2);
+      return lang === 'zh' ? 'zh' : 'en';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const defaultLang = detectLanguage();
+      document.documentElement.className = 'lang-' + defaultLang;
+
+      const toggles = document.querySelectorAll('.lang-toggle');
+      toggles.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === defaultLang);
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          const lang = btn.dataset.lang;
+          document.documentElement.className = 'lang-' + lang;
+          toggles.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
   </script>
 	<script>
 		const toggles = document.querySelectorAll('.lang-toggle');
