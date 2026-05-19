@@ -800,9 +800,29 @@ html.lang-en .group-title.en, html.lang-en .position-name.en, html.lang-en .posi
 
 /* 手機微調 */
 @media (max-width: 480px) {
-  .position-card, .ball-card { padding: 1rem 0.7rem; height: 235px; }
-  .headband-box { font-size: 0.72rem; padding: 0.2rem 0.4rem; }
-  .position-note { font-size: 0.7rem; }
+  .position-card,
+  .ball-card {
+    padding: 1rem 0.7rem;
+    min-height: 235px;
+    height: auto !important;
+  }
+
+  .headband-box,
+  .headband-box.en {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.4rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+    width: fit-content;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .position-note {
+    font-size: 0.7rem;
+  }
 }
 
 .coming-soon {
