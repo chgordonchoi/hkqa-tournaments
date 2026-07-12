@@ -1518,3 +1518,55 @@ a {
     display: inline-block;
   }
 }
+
+/* Tournament Format, Team Roster */
+  .bc-format-card{max-width:1120px;margin:0 auto;padding:1.5rem;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(10px);}
+  .bc-format-card p{margin:0;font-size:1.05rem;line-height:1.7;}
+  .bc-teams-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:1rem;}
+  .bc-team-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:1.75rem;text-align:center;backdrop-filter:blur(10px);}
+  .bc-team-logo{width:120px;height:120px;object-fit:contain;margin:0 auto 1rem;display:block;}
+  .bc-team-name{font-weight:700;font-size:1.25rem;margin-bottom:.25rem;}
+  .bc-team-country{opacity:.8;font-size:.95rem;}
+  @media (max-width:720px){.bc-teams-grid{grid-template-columns:1fr;}}
+
+  .bc-roster-team-card{display:flex;align-items:center;gap:1.25rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:1.25rem 1.5rem;backdrop-filter:blur(10px);margin-bottom:1.25rem;}
+	.bc-roster-team-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;}
+	.bc-roster-team-info{text-align:left;}
+	.bc-roster-team-name{font-weight:700;font-size:1.3rem;line-height:1.2;color:var(--bc-headings);}
+	.bc-roster-team-country{opacity:.8;font-size:.9rem;margin-top:.15rem;}
+
+	@media (max-width:520px){
+	  .bc-roster-team-card{flex-direction:column;text-align:center;gap:.75rem;}
+	  .bc-roster-team-info{text-align:center;}
+	}
+	
+  .bc-roster-team{margin-top:2.5rem;}
+  .bc-roster-team h3{font-size:1.4rem;margin-bottom:1rem;color:var(--bc-headings);}
+  .bc-roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1.1rem;}
+  .bc-player-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:.85rem;text-align:center;transition:transform .25s,box-shadow .25s;}
+  .bc-player-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(255,105,180,0.25);}
+  .bc-player-photo-wrap{width:100%;aspect-ratio:2.22/2.87;border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.08);margin:0 auto .6rem;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.12);}
+  .bc-player-photo-wrap{
+	  width:100%;
+	  aspect-ratio:2.22/2.87;
+	  border-radius:10px;
+	  overflow:hidden;
+	  background:rgba(255,255,255,0.08);
+	  margin:0 auto .6rem;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	  border:1px solid rgba(255,255,255,0.12);
+	}
+
+  .bc-player-photo-wrap img{
+	  width:calc(100% + 2px);
+	  height:calc(100% + 2px);
+	  margin:-2px;
+	  object-fit:cover;
+	  display:block;
+	}
+  .bc-player-photo-wrap.placeholder{font-size:.75rem;opacity:.6;padding:.4rem;line-height:1.3;}
+  .bc-player-name-en{font-weight:600;font-size:.95rem;line-height:1.25;}
+  .bc-player-name-native{font-size:.82rem;opacity:.85;margin-top:.15rem;}
+  .bc-player-number{font-size:.78rem;opacity:.7;margin-top:.3rem;}

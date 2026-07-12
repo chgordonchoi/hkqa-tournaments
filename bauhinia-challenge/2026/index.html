@@ -63,8 +63,8 @@
 		<li><a href="#details" class="nav-link en">Details</a></li>
       <li><a href="#highlights" class="nav-link zh">精彩重溫</a></li>
 		<li><a href="#highlights" class="nav-link en">Highlights</a></li>
-		<li style="display: none"><a href="#teams" class="nav-link zh">隊伍</a></li>
-		<li style="display: none"><a href="#teams" class="nav-link en">Teams</a></li>
+		<li><a href="#teams" class="nav-link zh">隊伍</a></li>
+		<li><a href="#teams" class="nav-link en">Teams</a></li>
 	  <li><a href="#format" class="nav-link zh">賽制</a></li>
 		<li><a href="#format" class="nav-link en">Format</a></li>
 	  <li><a href="./bc-regulations.html#regulations" class="nav-link en">Regulations</a>
@@ -119,11 +119,11 @@
       </p>
 
       <div class="hero-actions">
-        <a href="https://link.hkquadball.org/bc-idv" class="btn btn-primary"><span class="zh">個人報名表格</span><span class="en">Individual Entry</span></a>
-		<a href="#registration" class="btn btn-secondary"><span class="zh">查看報名詳情</span><span class="en">Registration Info</span></a>
-		<a href="https://link.hkquadball.org/bc-team" class="btn btn-primary"><span class="zh">球隊參賽意向登記</span><span class="en">Team Expression of Interest</span></a>
+        <a href="https://link.hkquadball.org/bc-idv" class="btn btn-primary" style="display: none"><span class="zh">個人報名表格</span><span class="en">Individual Entry</span></a>
+		<a href="#registration" class="btn btn-secondary" style="display: none"><span class="zh">查看報名詳情</span><span class="en">Registration Info</span></a>
+		<a href="https://link.hkquadball.org/bc-team" class="btn btn-primary" style="display: none"><span class="zh">球隊參賽意向登記</span><span class="en">Team Expression of Interest</span></a>
 		<a href="https://www.youtube.com/@hkquadball/live/" class="btn btn-primary" style="display: none"><span class="zh">收睇現場直播</span><span class="en">Watch Live</span></a>
-        <a href="mailto:tournament@hkquadball.org" class="btn btn-secondary"><span class="zh">贊助查詢</span><span class="en">Sponsor Enquiry</span></a>
+        <a href="mailto:tournament@hkquadball.org" class="btn btn-secondary" style="display: none"><span class="zh">贊助查詢</span><span class="en">Sponsor Enquiry</span></a>
 		<a href="#quadball-intro" class="btn btn-secondary"><span class="zh">認識魁地奇運動</span><span class="en">More About Quadball</span></a>
       </div>
 <!--
@@ -251,11 +251,11 @@
 	</section>
 
 <!-- Registration -->
-	  <section id="registration" class="section">
+	  <section id="registration" class="section" style="display: none">
 		<div class="container">
 			<h2 class="section-title zh">報名</h2>
 			<h2 class="section-title en">Registration</h2>
-			<p class="coming-soon">
+			<p class="coming-soon" style="display: none">
 				<span class="zh">請大家預留<span class="alnum">7</span>月<span class="alnum">18</span>日全日活動，敬請期待！</span>
 				<span class="en">Please mark your calendar for 18 Jul!</span>
 			</p>
@@ -471,14 +471,61 @@
 		  </div>
 		</section>
 <!-- Teams -->
-	  <section id="teams" class="section" style="display: none">
+	  <section id="teams" class="section">
 		<div class="container">
 		  <h2 class="section-title zh">參賽隊伍</h2>
 		  <h2 class="section-title en">Teams</h2>
-		  <p class="coming-soon">
-			<span class="zh">隊伍及球員名單容後公佈。</span>
-			<span class="en">Team and player rosters will be announced later.</span>
-		  </p>
+			
+			<!-- ================= ID Emperors ================= -->
+			<div class="bc-roster-team">
+				<div class="bc-roster-team-card">
+					<img class="bc-roster-team-logo" src="./assets/img/teams/icon-ID-Emperors.jpg" alt="International Dynamic Emperors logo">
+					<div class="bc-roster-team-name">International Dynamic Emperors</div>
+					<div class="bc-roster-team-country"><span class="en">Tokyo &amp; Osaka, Japan</span><span class="zh">日本東京及大阪</span></div>
+				</div>
+			  <div class="bc-roster-grid" style="display: none">
+				<!-- Repeat .bc-player-card per player -->
+				<div class="bc-player-card">
+				  <div class="bc-player-photo-wrap">
+					<!-- Replace with <img src="..."> when photo is available -->
+					<span class="placeholder">Photo pending</span>
+				  </div>
+				  <div class="bc-player-name-en">FIRSTNAME LASTNAME</div>
+				  <div class="bc-player-name-native">漢字名（如有）</div>
+				  <div class="bc-player-number">#00</div>
+				</div>
+				<!-- ... more players ... -->
+			  </div>
+			</div>
+			
+			<!-- ================= Vic Dragons ================= -->
+			<div class="bc-roster-team">
+				<div class="bc-roster-team-card">
+					<img class="bc-roster-team-logo" src="./assets/img/teams/icon-Vic-Dragons.jpg" alt="Victorian Dragons logo">
+					<div class="bc-roster-team-name">Victorian Dragons</div>
+					<div class="bc-roster-team-country"><span class="en">Hong Kong</span><span class="zh">香港</span></div>
+				</div>
+			  <div class="bc-roster-grid" style="display: none">
+				<div class="bc-player-card">
+				  <div class="bc-player-photo-wrap">
+					<span class="placeholder" style="display: none">Photo pending</span>
+					<img src="./assets/img/teams/vd/ID-Photo-VD-Phyllis-Tsz-Yan-LAU.jpg">
+				  </div>
+				  <div class="bc-player-name-en">LAU Tsz Yan</div>
+				  <div class="bc-player-name-native"></div>
+				  <div class="bc-player-number">#1</div>
+				</div>
+				<div class="bc-player-card">
+				  <div class="bc-player-photo-wrap">
+					<img src="./assets/img/teams/vd/ID-Photo-VD-Toby-LAU.jpg">
+				  </div>
+				  <div class="bc-player-name-en">Toby LAU</div>
+				  <div class="bc-player-name-native">劉霆鋒</div>
+				  <div class="bc-player-number">#3</div>
+				</div>
+				<!-- ... more players ... -->
+			  </div>
+			</div>
 		</div>
 	  </section>
 
@@ -487,7 +534,7 @@
 		<div class="container">
 			<h2 class="section-title zh">賽制與規則</h2>
 			<h2 class="section-title en">Format and Rules</h2>
-			<p class="coming-soon" style="display: ">
+			<p class="coming-soon" style="display: none">
 				<span class="zh">
 					最終賽制（例如單循環聯賽、三角賽或淘汰賽）將視實際參賽隊數而定，
 					並會於<span class="alnum">2026</span>年<span class="alnum">6</span>月<span class="alnum">19</span>日後公佈。
@@ -497,16 +544,34 @@
 					based on the number of participating teams and will be announced after 19 June 2026.
 				</span>
 			</p>
+			<div class="bc-format-card">
+				<p class="en">Two participating teams shall play a two-legged tie in accordance with clause 5.6 of the Tournament Regulations.</p>
+				<p class="zh">兩支參賽隊伍將按賽事章程第 5.6 條進行兩輪制賽事（Two-legged Tie）。</p>
+			</div>
+			
+			<div class="bc-teams-grid">
+				<div class="bc-team-card">
+					<img class="bc-team-logo" src="./assets/img/teams/icon-ID-Emperors.jpg" alt="International Dynamic Emperors logo">
+					<div class="bc-team-name">International Dynamic Emperors</div>
+					<div class="bc-team-country"><span class="en">Tokyo &amp; Osaka, Japan</span><span class="zh">日本東京及大阪</span></div>
+				</div>
+				<div class="bc-team-card">
+					<img class="bc-team-logo" src="./assets/img/teams/icon-Vic-Dragons.jpg" alt="Victorian Dragons logo">
+					<div class="bc-team-name">Victorian Dragons</div>
+					<div class="bc-team-country"><span class="en">Hong Kong</span><span class="zh">香港</span></div>
+				</div>
+			</div>
+	
 			<div class="bilingual-text">
 
-				<p class="zh" style="display: none">
-					參賽隊伍<span class="alnum"><strong>Hongkong Hydras Quidditch Club</strong></span>及<span class="alnum"><strong>Victorian Dragons</strong></span>將對賽兩輪決出冠軍，勝出條件依序為：
+				<p class="zh">
+					參賽隊伍<span class="alnum"><strong>International Dynamic Emperors</strong></span>及<span class="alnum"><strong>Victorian Dragons</strong></span>將對賽兩輪決出冠軍，勝出條件依序為：
 				</p>
-				<p class="en" style="display: none">
-					The teams – <strong>Hongkong Hydras Quidditch Club</strong> and <strong>Victorian Dragons</strong> – will play a
+				<p class="en">
+					The teams – <strong>International Dynamic Emperors</strong> and <strong>Victorian Dragons</strong> – will play a
 					two-legged tie. The champion is awarded to the team that has:
 				</p>
-				<ol type="1" style="display: none">
+				<ol type="1">
 					<li><span class="zh">最多勝出場數</span><span class="en">A greater number of games won, otherwise;</span>
 					<li><span class="zh">最高累計得分</span><span class="en">A higher cumulative score, otherwise;</span>
 					<li><span class="zh">奪得最多金探子</span><span class="en">A greater number of snitch (flag) catches, otherwise;</span>
