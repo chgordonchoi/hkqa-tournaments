@@ -1519,6 +1519,12 @@ a {
   }
 }
 
+/* Schedules */
+.bc-schedule-table{width:100%;border-collapse:collapse;margin-top:.5rem;}
+.bc-schedule-table td{padding:.75rem .5rem;border-bottom:1px solid rgba(255,255,255,0.1);}
+.bc-schedule-time{font-weight:700;color:var(--bc-headings);width:80px;}
+.bc-schedule-table tr:last-child td{border-bottom:none;}
+
 /* Tournament Format, Team Roster */
   .bc-format-card{max-width:1120px;margin:0 auto;padding:1.5rem;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(10px);}
   .bc-format-card p{margin:0;font-size:1.05rem;line-height:1.7;}
